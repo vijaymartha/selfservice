@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- ===== BOX ICONS ===== -->
+	<link href="https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css" rel="stylesheet" />
+	<!-- ===== CSS ===== -->
+	<link rel="stylesheet" href="assets/css/styles.css" />
+	<title>Sidebar menu responsive</title>
+</head>
+
+<body id="body-pd">
+	<header class="header" id="header">
+		<div class="header__left">
+			<div class="header__toggle"> <i class="bx bx-menu" id="header-toggle"></i> </div>
+			<figure><img src="assets/img/logo.svg" width="60" /></figure>
+			<h2 style="color: navy; font-family: Arial, Helvetica, sans-serif">
+               Deutsche Bank
+            </h2> </div>
+		<div class="header__img"> <img src="assets/img/user.png" alt="" /> </div>
+	</header>
+	<div class="l-navbar" id="nav-bar">
+		<nav class="nav">
+			<div>
+				<div class="nav__list">
+					<a href="#" class="nav__link"> <i class="bx bx-folder nav__icon"></i> <span class="nav__name">Dashboard</span> </a>
+					<a href="javascript:displayDashBoard()" class="nav__link active" id="dashBoard"> <i class="bx bx-grid-alt nav__icon"></i> <span class="nav__name">Transfer Request</span> </a>
+					<a href="#" class="nav__link"> <i class="bx bx-message-square-detail nav__icon"></i> <span class="nav__name">Messages</span> </a>
+					<a href="#" class="nav__link"> <i class="bx bx-bookmark nav__icon"></i> <span class="nav__name">Favorites</span> </a>
+					<a href="#" class="nav__link"> <i class="bx bx-folder nav__icon"></i> <span class="nav__name">Data</span> </a>
+					<a href="#" class="nav__link"> <i class="bx bx-bar-chart-alt-2 nav__icon"></i> <span class="nav__name">Analytics</span> </a>
+				</div>
+			</div>
+			<a href="#" class="nav__link"> <i class="bx bx-log-out nav__icon"></i> <span class="nav__name">Log Out</span> </a>
+		</nav>
+  </div>
+  
+	<!-- <div id="head_pos" style="color: navy;">
+    <h3>Data Transfer Request</h3> </div> -->
+
+  <div id = "rem_container"> 
+
+    <div id="block_container" style = "display: none;">
+    
+		<div class="form_in_container">
+
+			<div class="form_container">
+				<form action="action_page.php"></form>
+				<label for="fname">First Name</label>
+				<input type="text" id="fname" name="firstname" placeholder="Your name.." line-height: 80px; />
+				<label for="lname">Last Name</label>
+				<input type="text" id="lname" name="lastname" placeholder="Your last name.." />
+				<label for="country">Country</label>
+				<select id="country" name="country">
+					<option value="australia">Australia</option>
+					<option value="canada">Canada</option>
+					<option value="usa">USA</option>
+				</select>
+				<label for="subject">Subject</label>
+				<textarea id="subject" name="subject" placeholder="Write something.." style="height: 200px"></textarea>
+				<input type="submit" value="Submit" /> </div>
+
+			<div class="form_right_description">
+			<h3 style="color: darkblue">Data Transfer Request</h3>
+      <p style= "font-family: Times New Roman;"> This form is responsible to provide the data transfer request and onboard data into datafactory. Deutsche Bank established its first branch in India in 1980 and currently operates branches in 16 cities. Client centricity: we are structured around the clients that we serve – corporate clients, private clients and fiduciaries & institutions. </p>
+      <p style= "font-family: Times New Roman;">A stock exchange is a marketplace, where financial securities issued by companies are bought and sold. They are part of the broader capital market ecosystem. Securities issued by companies, such as shares and bonds, are traded on the stock exchanges, after they have been issued in the primary market. A company, desirous of listing its securities on a stock exchange, has to enter into an agreement</p>
+      <a href="#" style="color: royalblue;font-weight:bold;text-decoration: underline;">Read More >></a>
+		</div>
+		</div>
+		
+  </div>
+  </div>
+    
+	
+  
+
+	<div class="body__dashboard" id= "bodydashboard">            
+         <div class="box">  
+             <img src="assets/img/graph1.png" width="350" height="300">                            
+         </div>
+         <div class="box">
+             <img src="assets/img/graph2.png" width="350" height="300">
+         </div>
+         <div class="box">
+             <img src="assets/img/graph3.png" width="350" height="300">
+         </div>
+  </div>
+	<!--===== MAIN JS =====-->
+  <script src="assets/js/main.js"></script>
+
+  <script>
+
+    document.getElementById("dashBoard").addEventListener("click", displayDashBoard);
+        
+
+    function displayDashBoard() {
+      document.getElementById('block_container').style.display = "block";      
+      document.getElementById('bodydashboard').style.display = "none";                                                                   
+      
+    }
+
+  </script>
+
+  
+
+</body>
+
+</html>
